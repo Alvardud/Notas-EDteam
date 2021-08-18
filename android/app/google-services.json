@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "394692122206",
+    "project_id": "notas-edteam",
+    "storage_bucket": "notas-edteam.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:394692122206:android:ba78263a1e0eb8265246cf",
+        "android_client_info": {
+          "package_name": "com.alvardud.app_notes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "394692122206-8t7pfltgd413hg48u1gki0em745cfmql.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGaOIyeWohZ3iwwYg94gwNbhYDVkbpSbw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "394692122206-8t7pfltgd413hg48u1gki0em745cfmql.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
