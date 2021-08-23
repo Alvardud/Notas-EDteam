@@ -88,17 +88,31 @@ class _Body extends StatelessWidget {
                   children: [
                     Flexible(
                         flex: 1,
-                        child: _card("PDF", Icons.book_outlined, () async {
-                          //await FileServices.instance.generatePDF(note);
-                        })),
-                    Flexible(flex: 1, child: _card("Notas", Icons.note, () {})),
+                        child: _card(
+                            "PDF",
+                            Icons.book_outlined,
+                            () => Navigator.pushNamed(context,
+                                ListSimpleNotes.LIST_SIMPLE_NOTES_ROUTE,
+                                arguments: ListSimpleArguments(
+                                    action: () {}, pdf: true)))),
+                    Flexible(
+                        flex: 1,
+                        child: _card(
+                            "Notas",
+                            Icons.note,
+                            () => Navigator.pushNamed(context,
+                                ListSimpleNotes.LIST_SIMPLE_NOTES_ROUTE,
+                                arguments:
+                                    ListSimpleArguments(action: () {})))),
                     Flexible(
                         flex: 1,
                         child: _card(
                             "Imagen",
                             Icons.image_outlined,
                             () => Navigator.pushNamed(context,
-                                ListSimpleNotes.LIST_SIMPLE_NOTES_ROUTE))),
+                                ListSimpleNotes.LIST_SIMPLE_NOTES_ROUTE,
+                                arguments:
+                                    ListSimpleArguments(action: () {})))),
                   ],
                 ),
               ),

@@ -133,7 +133,9 @@ class __BodyState extends State<_Body> {
               }, StatusNetwork.Exception);
             }
             if (!snapshot.hasData) {
-              return Container();
+              return Column(
+                children: [LinearProgressIndicator()],
+              );
             } else {
               Map<String, dynamic> response =
                   snapshot.data as Map<String, dynamic>;

@@ -1,4 +1,9 @@
+import 'package:aplicacion_notas_edteam/src/core/controllers/theme_controller.dart';
 import 'package:flutter/material.dart';
+
+Color fontColor() {
+  return ThemeController.instance.brightnessValue ? Colors.black : Colors.white;
+}
 
 class TextInput extends StatelessWidget {
   final TextEditingController? controller;
@@ -25,7 +30,11 @@ class TextInput extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(title, style: Theme.of(context).textTheme.caption),
+          Text(title,
+              style: Theme.of(context)
+                  .textTheme
+                  .caption!
+                  .copyWith(color: fontColor())),
           SizedBox(height: 4),
           Container(
             width: double.infinity,
@@ -40,7 +49,8 @@ class TextInput extends StatelessWidget {
                   suffixIcon: action != null
                       ? IconButton(onPressed: action, icon: Icon(icon))
                       : SizedBox(),
-                  contentPadding: EdgeInsets.symmetric(horizontal: 8,vertical:12),
+                  contentPadding:
+                      EdgeInsets.symmetric(horizontal: 8, vertical: 12),
                   focusedBorder: InputBorder.none,
                   errorBorder: InputBorder.none,
                   enabledBorder: InputBorder.none,
